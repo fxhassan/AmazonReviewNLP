@@ -31,14 +31,11 @@ for i in range(0,len(dataset)):
     
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import CountVectorizer   
-from sklearn.feature_extraction.text import TfidfTransformer
-from sklearn.linear_model import SGDClassifier
  
 from sklearn.pipeline import Pipeline
 classifier = Pipeline([('vect', CountVectorizer()),
                       ('clf-svm', MultinomialNB())])
   
-
 X = corpus
 y = dataset.iloc[:, 1].values
 
